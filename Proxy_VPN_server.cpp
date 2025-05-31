@@ -125,7 +125,7 @@ public:
 std::string resolve_host(const std::string& host) {
     std::lock_guard<std::mutex> lock(route_mutex);
     if (routing_table.count(host)) {
-        std::cout << "[ROUTING] resolved " << host << " → " << routing_table[host] << "\n";
+        std::cout << "[ROUTING] resolved " << host << " -> " << routing_table[host] << "\n";
         return routing_table[host];
     }
 
